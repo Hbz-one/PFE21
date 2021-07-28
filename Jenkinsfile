@@ -6,14 +6,14 @@ pipeline {
 
     stage('Checkout Source') {
       steps {
-        git url:'https://github.com/Hbz-one/hellowhale.git', branch:'master'
+        git url:'https://github.com/Hbz-one/hellowhale.git', branch:'To_test'
       }
     }
     
       stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("hbzone/hellowhale:${env.BUILD_ID}")
+                    myapp = docker.build("hbzone/carrental-v1:${env.BUILD_ID}")
                 }
             }
         }
