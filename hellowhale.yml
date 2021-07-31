@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: hello-whale-container
-        image: hbzone/carrental-v1:latest
+        image: hbzone/hellowhale:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
